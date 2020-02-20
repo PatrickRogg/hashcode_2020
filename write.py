@@ -18,3 +18,4 @@ def create_output(results, input_filename):
 
         for book in result.books:
             f.write(str(book.id) + ' ')
+        f.write('\n')
