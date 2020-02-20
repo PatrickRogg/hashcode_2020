@@ -3,7 +3,36 @@ from library import Library
 from result import Result
 
 
-def calc_books():
-    result1 = Result(Library(1, 0, 0, 0), [Book(2, 2), Book(5, 5)], 10)
-    result2 = Result(Library(0, 0, 0, 0), [Book(1, 1), Book(3, 2), Book(4, 3), Book(6, 4), Book(7, 5)], 10)
-    return [result1, result2]
+def calc_books(remaining_days: int, libraries):
+    results = []
+    prev_signup_time = 0
+    while remaining_days > 0:
+        library = get_best_library(libraries, prev_signup_time)
+        results.append(Result(library, library.books_set[:remaining_days], library.remaining_score))
+        remaining_days -= library.signup_time
+        prev_signup_time = library.signup_time
+
+    return results
+
+
+def get_best_library(libraries, prev_signup_time):
+    max_library: Library = None
+
+    for library in libraries:
+        calc_remaining_library_score(library, prev_signup_time)
+
+        if max_library is None or max_library.remaining_score < library.remaining_score:
+            max_library = library
+
+    libraries.remove(max_library)
+
+    return max_library
+
+
+def calc_remaining_library_score(library: Library, prev_signup_time: int):
+    to_remove_books = prev_signup_time * library.number_books_per_day
+    start_index = len(library.books_set) - 1 - to_remove_books
+
+    for i in range(start_index, len(library.books_set)):
+        book: Book = library.books_set[i]
+        library.remaining_score -= book.score
