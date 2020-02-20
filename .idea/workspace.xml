@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="855dbf9f-6947-4dab-aed0-74b7ba471ab9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/outputs/a_example/16 - 13_15_23.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/b_small/99 - 13_15_34.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/b_small/99 - 18_16_18.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/b_small/99 - 18_16_29.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/c_medium/4495 - 13_15_13.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/d_quite_big/999999725 - 13_14_38.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/e_also_big/504999983 - 13_14_54.in" beforeDir="false" />
-    </list>
+    <list default="true" id="855dbf9f-6947-4dab-aed0-74b7ba471ab9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
