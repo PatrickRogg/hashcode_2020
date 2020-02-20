@@ -16,6 +16,10 @@ def create_output(results, input_filename):
     for i, result in enumerate(results):
         f.write(str(result.library.id) + ' ' + str(len(result.books)) + '\n')
 
+        book_print = ''
         for book in result.books:
-            f.write(str(book.id) + ' ')
+            book_print += str(book.id) + ' '
+
+        print(book_print)
+        f.write(book_print[:-1])
         f.write('\n')
